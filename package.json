@@ -1,0 +1,38 @@
+{
+	"name": "browser-fs-read-stream",
+	"description": "Browserify transform to replace fs.createReadStream by HTTP GET requests.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"browserify",
+		"browser",
+		"transform",
+		"shim",
+		"fs",
+		"createReadStream",
+		"read stream",
+		"fetch",
+		"http"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/browser-fs-read-stream",
+	"repository": "derhuerst/browser-fs-read-stream",
+	"bugs": "https://github.com/derhuerst/browser-fs-read-stream/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"tap-min": "^1.2.2",
+		"tape": "^4.8.0"
+	},
+	"scripts": {
+		"test": "node test/index.js | tap-min",
+		"prepublishOnly": "npm test"
+	}
+}
