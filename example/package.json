@@ -1,0 +1,15 @@
+{
+	"private": true,
+	"name": "browser-fs-read-stream-example",
+	"version": "1.0.0",
+	"description": "How to use browser-fs-read-stream.",
+	"main": "index.js",
+	"scripts": {
+		"build": "browserify -t .. index.js >bundle.js"
+	},
+	"author": "Jannis R <mail@jannisrde>",
+	"license": "ISC",
+	"devDependencies": {
+		"browserify": "^14.5.0"
+	}
+}
