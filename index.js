@@ -39,6 +39,7 @@ const transform = (file, opt) => {
 				n.arguments.length === 1 &&
 				n.arguments[0].value === 'fs'
 			) nameOfFs = n.parent.id.name
+			// todo: destructuring – n.parent.id might be an `ObjectPattern`
 		}
 
 		const ast = acorn.parse(src)
@@ -53,6 +54,7 @@ const transform = (file, opt) => {
 			const res = parseCall(n)
 			if (res) {
 				// todo: transform path using passed fn
+				// todo: actually use fs-read-stream-over-http
 				n.update(`foo(${res.path}, ${res.opt})`)
 			}
 		}
